@@ -1,2 +1,2 @@
-# Snider_M_GOT_HW
-Project for MMED-1055
+# GOT_video
+Update this with a proper readme doc
