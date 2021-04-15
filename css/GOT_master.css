@@ -36,7 +36,7 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:5400px; transition: all .5s; }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -52,7 +52,7 @@ main {
 
 /* ----- image sprite ----- */
 .sigilContainer {
-	width:51px;
+	width:50px;
 	height:54px;
 	display:inline-block;
 	overflow:hidden;
@@ -63,23 +63,32 @@ main {
 	-moz-transition:-moz-transform .3s;
 }
 
-.stark { background-position:0px -54px; }
-.stark:hover { background-position:0px 0px; }
+.stark { background-position:-3px -54px; }
+.stark:hover { background-position:-3px 0px; }
 
-.baratheon { background-position:-50.5px -54px; }
-.baratheon:hover { background-position:-51px 0px; }
+.baratheon { background-position:-53.5px -54px; }
+.baratheon:hover { background-position:-53.5px 0px; }
 
-.lannister { background-position:-101px -54px; }
-.lannister:hover { background-position:-101px 0px; }
+.lannister { background-position:-104.5px -54px; }
+.lannister:hover { background-position:-104.5px 0px; }
 
-.tully { background-position:-152px -54px; }
-.tully:hover { background-position:-152px 0px; }
+.tully { background-position:-155.5px -54px; }
+.tully:hover { background-position:-155.5px 0px; }
 
-.greyjoy { background-position:-202px -54px; }
-.greyjoy:hover { background-position:-202px 0px; }
+.greyjoy { background-position:-206px -54px; }
+.greyjoy:hover { background-position:-206px 0px; }
 
-.arryn { background-position:-253px -54px; }
-.arryn:hover { background-position:-253px 0px; }
+.arryn { background-position:-256px -54px; }
+.arryn:hover { background-position:-256px 0px; }
+
+.targaryen { background-position:-307px -54px; }
+.targaryen:hover { background-position:-307px 0px; }
+
+.frey { background-position:-356px -54px; }
+.frey:hover { background-position:-356px 0px; }
+
+.tyrell { background-position:-406px -54px; }
+.tyrell:hover { background-position:-406px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
