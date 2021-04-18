@@ -7,7 +7,8 @@
 		  lightbox = document.querySelector(".lightbox"),
 		  vid = lightbox.querySelector('video'),
 		  houseName = document.querySelector('h1'),
-		  houseDescription = document.querySelector('.house-info');
+		  houseDescription = document.querySelector('.house-info')
+
 
 	// adding house info using arrays -> this is what you would do for the FIP as well
 	const houseInfo = [
@@ -30,6 +31,7 @@
 		['Tyrell', `House Tyrell of Highgarden is one of the Great Houses of the Seven Kingdoms, being Lords Paramount of the Mander and the liege lords of the Reach. A large, wealthy house, its wealth is only surpassed among the Great Houses by House Lannister, and the Tyrells can field the greatest armies. Additionally, if they call the ships of the Redwyne fleet, the lords of the Shield Islands, and the coastal lords, they can command a navy that equals if not surpasses the royal fleet of King's Landing.`]
 	];
 
+
 	function playVideo() {
 		vid.play();
 	}
@@ -38,6 +40,7 @@
 		vid.pause();
 		vid.currentTime = 0;
 	}
+
 
 	function setHouseData(name, desc) {
 		houseName.textContent = `House ${name}`;
@@ -51,6 +54,7 @@
 
 		// debugger;
 		vid.src = targetSource;
+
 		vid.load();
 		playVideo();
 	}
@@ -67,17 +71,19 @@
 
 	function popLightBox(event) {
 		// change the text content on the page
-	
 		// add a class to open the lightbox
 		if (event.target.className.includes('sigilContainer')) {
+			// setTimeout(function(){lightBox.classList.add('show-lightbox')}, 2000);
 			lightbox.classList.add('show-lightbox');
 
-			let targetHouse = event.target.className.split(" ")[1]; 
+			let targetHouse = event.target.className.split(" ")[1];
 			setVideoSource(targetHouse);
 			// this is not in the right spot for the function invocation
 
 			// set house data by running the setHouseData
 			setHouseData(houseInfo[event.target.dataset.offset][0], houseInfo[event.target.dataset.offset][1]);
+
+			setTimeout(function(){lightBox.classList.add('show-lightbox')}, 4000);
 
 			lightbox.querySelector('.close').addEventListener('click', () => {
 				stopVideo();
@@ -86,8 +92,12 @@
 			})
 		}
 	}
-
 	
+	var trailer = document.getElementById("myVideo");
+      trailer.onended = function() {
+      lightbox.classList.remove('show-lightbox')
+    }
+
 	sigils.addEventListener('click', animateBanner);
 	sigils.addEventListener('click', popLightBox);
 })();
